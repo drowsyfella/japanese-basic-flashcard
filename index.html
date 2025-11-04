@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Japanese N5 Flashcard</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--
+      Japanese N5 Flashcard
+      - Minimal, responsive, accessible flashcard app
+      - Uses only HTML, CSS, and JavaScript
+      Accessibility highlights:
+        * High-contrast color scheme
+        * Keyboard operable: Tab to focus card & buttons, Enter to flip
+        * aria-labels and roles on interactive elements
+        * lang="ja" for Japanese text nodes
+        * Live region announces card changes
+    -->
+  </head>
+  <body>
+    <main class="app" aria-label="Japanese N5 Flashcard application" data-source="data/flashcards.json">
+      <header class="topbar" aria-label="Top bar">
+        <div class="spacer"></div>
+      </header>
+
+      <!-- Search panel -->
+      <section id="searchPanel" class="search-panel" aria-label="Search cards" hidden>
+        <div class="search-bar">
+          <input id="searchInput" type="text" class="search-input" placeholder="Search romaji or English..." aria-label="Search romaji or English" />
+          <button type="button" id="searchCloseBtn" class="icon-btn" aria-label="Close search">✕</button>
+        </div>
+        <ul id="searchResults" class="search-results" role="listbox" aria-label="Search results"></ul>
+      </section>
+      <h1 class="visually-hidden">Japanese N5 Flashcard</h1>
+
+      <!-- Live region for announcing card changes to assistive tech -->
+      <div id="live-region" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+      <!-- Flashcard: single-sided card showing all content -->
+      <section class="card" aria-label="Flashcard">
+        <div id="cardFace" class="card-inner" aria-label="Flashcard content">
+          <div class="card-face card-front">
+            <p id="jpText" class="jp" lang="ja"></p>
+            <p id="romajiText" class="romaji"></p>
+            <p id="jaExampleText" class="example" lang="ja"></p>
+            <p id="enText" class="en"></p>
+            <p id="exampleText" class="example"></p>
+          </div>
+        </div>
+        <p class="help" id="reveal-help">Press Space to reveal the english word</p>
+      </section>
+
+      <!-- Controls: difficulty selection -->
+      <section class="controls" aria-label="Difficulty buttons">
+        <div class="difficulty-group" role="group" aria-label="Select difficulty">
+          <button type="button" id="easyBtn" class="btn btn-easy" aria-label="Mark this card as easy">(1) Easy</button>
+          <button type="button" id="mediumBtn" class="btn btn-medium" aria-label="Mark this card as medium">(2) Medium</button>
+          <button type="button" id="hardBtn" class="btn btn-hard" aria-label="Mark this card as hard">(3) Hard</button>
+        </div>
+      </section>
+
+      <!-- Randomize deck button -->
+      <nav class="nav" aria-label="Deck actions">
+        <button type="button" id="randomBtn" class="btn btn-secondary" aria-label="Randomize remaining cards">Random</button>
+      </nav>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+

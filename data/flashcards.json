@@ -1,0 +1,74 @@
+[
+  {
+    "jp": "水",
+    "romaji": "mizu",
+    "en": "water",
+    "jaExample": "水を飲みます。",
+    "example": "I drink water."
+  },
+  {
+    "jp": "火",
+    "romaji": "hi",
+    "en": "fire",
+    "jaExample": "火は熱いです。",
+    "example": "Fire is hot."
+  },
+  {
+    "jp": "犬",
+    "romaji": "inu",
+    "en": "dog",
+    "jaExample": "犬はかわいいです。",
+    "example": "The dog is cute."
+  },
+  {
+    "jp": "猫",
+    "romaji": "neko",
+    "en": "cat",
+    "jaExample": "猫が好きです。",
+    "example": "I like cats."
+  },
+  {
+    "jp": "山",
+    "romaji": "yama",
+    "en": "mountain",
+    "jaExample": "あの山は高いです。",
+    "example": "That mountain is high."
+  },
+  {
+    "jp": "川",
+    "romaji": "kawa",
+    "en": "river",
+    "jaExample": "川は長いです。",
+    "example": "The river is long."
+  },
+  {
+    "jp": "学校",
+    "romaji": "gakkō",
+    "en": "school",
+    "jaExample": "毎日、学校へ行きます。",
+    "example": "I go to school every day."
+  },
+  {
+    "jp": "本",
+    "romaji": "hon",
+    "en": "book",
+    "jaExample": "この本はおもしろいです。",
+    "example": "This book is interesting."
+  },
+  {
+    "jp": "食べる",
+    "romaji": "taberu",
+    "en": "to eat",
+    "jaExample": "七時に朝ごはんを食べます。",
+    "example": "I eat breakfast at seven."
+  },
+  {
+    "jp": "見る",
+    "romaji": "miru",
+    "en": "to seed; to watch",
+    "jaExample": "金曜日に映画を見ます。",
+    "example": "We watch a movie on Friday."
+  }
+]
+
+
