@@ -206,5 +206,3 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .card-face { transition: none; }
 }
-
-
