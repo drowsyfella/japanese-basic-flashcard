@@ -399,5 +399,3 @@ function playDing() {
 // Notes for future editors:
 // - To add a new card, push another object into the `flashcards` array
 //   with keys: jp, romaji, en, example. Keep strings short for best layout.
-
-
