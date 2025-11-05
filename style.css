@@ -179,13 +179,15 @@ html, body {
 .btn-medium { background: var(--warning); }
 .btn-hard { background: var(--danger); color: #fff; }
 
-.btn-secondary {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--accent);
+.btn-continue {
+  width: min(92vw, 420px);
+  background: #22c55e;
+  color: #ffffff;
+  border-color: #22c55e;
 }
-.btn-secondary:hover {
-  background: rgba(45, 212, 191, 0.12);
+.btn-continue:hover {
+  background: #16a34a;
+  border-color: #16a34a;
 }
 
 .nav { gap: 0.75rem; }

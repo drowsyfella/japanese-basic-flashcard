@@ -1,9 +1,9 @@
 /*
   Japanese N5 Flashcard - Behavior
-  - Stores a small JSON array of N5 words
+  - Loads flashcards from JSON file
   - Renders a single card with front/back
-  - Click or press Enter to flip
-  - Buttons for Easy/Medium/Hard -> alert
+  - Click or press Space to reveal English text
+  - Continue button to move to next card
   - Previous/Next navigation
   - Accessibility: keyboard operable, aria-live updates, lang for Japanese
 */
@@ -183,9 +183,6 @@ const enText = document.getElementById("enText");
 const exampleText = document.getElementById("exampleText");
 const liveRegion = document.getElementById("live-region");
 
-const easyBtn = document.getElementById("easyBtn");
-const mediumBtn = document.getElementById("mediumBtn");
-const hardBtn = document.getElementById("hardBtn");
 const randomBtn = document.getElementById("randomBtn");
 const searchToggleBtn = document.getElementById("searchToggleBtn");
 const searchPanel = document.getElementById("searchPanel");
@@ -254,11 +251,6 @@ function rateAndContinue(difficulty) {
 // --- Event wiring ---
 // No flip interactions for single-sided card
 
-// Difficulty actions (no alerts; proceed and schedule reappearance)
-easyBtn.addEventListener("click", () => rateAndContinue("easy"));
-mediumBtn.addEventListener("click", () => rateAndContinue("medium"));
-hardBtn.addEventListener("click", () => rateAndContinue("hard"));
-
 // Toggle blur on English word/example when clicked
 enText.addEventListener("click", () => enText.classList.toggle("blurred"));
 exampleText.addEventListener("click", () => exampleText.classList.toggle("blurred"));
@@ -282,8 +274,7 @@ randomBtn.addEventListener("click", () => {
   playDing();
 });
 
-// Keyboard shortcuts: Enter/Space flips when card focused;
-// Global: 1=Easy, 2=Medium, 3=Hard
+// Keyboard shortcuts: Space reveals English text
 document.addEventListener("keydown", (e) => {
   const activeTag = (document.activeElement && document.activeElement.tagName) || "";
   const isTyping = activeTag === "INPUT" || activeTag === "TEXTAREA" || activeTag === "SELECT" || document.activeElement?.isContentEditable;
@@ -306,9 +297,6 @@ document.addEventListener("keydown", (e) => {
     exampleText.classList.remove("blurred");
     return;
   }
-  if (e.key === "1") rateAndContinue("easy");
-  if (e.key === "2") rateAndContinue("medium");
-  if (e.key === "3") rateAndContinue("hard");
 });
 
 // --- Search feature ---
